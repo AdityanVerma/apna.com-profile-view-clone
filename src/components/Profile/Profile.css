@@ -3,10 +3,21 @@
     --bg-grey: rgb(244, 245, 247);
     --para-color: rgb(25, 10, 40);
     --green-link: rgb(31, 130, 104);
+    --grey-txt: rgb(140, 133, 148);
 
     --twe-px: 0.75rem;
     --fou-px: 0.875rem;
 }
+
+/* UNIVERSAL CLASSES */
+.link {
+    color: rgb(31, 130, 104);
+    font-weight: 600;
+    font-size: var(--fou-px);
+    line-height: 1.25rem;
+    cursor: pointer;
+}
+
 
 /* ---------------- Section ---------------- */
 main{
@@ -128,13 +139,6 @@ section{
     line-height: 1.25rem;
     color: rgb(25, 10, 40);
 }
-.link {
-    color: rgb(31, 130, 104);
-    font-weight: 600;
-    font-size: var(--fou-px);
-    line-height: 1.25rem;
-    cursor: pointer;
-}
 
 
 /* ---------------- Other Information ---------------- */
@@ -151,8 +155,68 @@ section{
     margin-top: -2rem;
 }
 
+/* EDUCATION */
+.education > .info-heading,
+.education > .info-heading > div {
+    align-items: center;
+}
+.education > .info-heading svg {
+    overflow: hidden;
+}
+.education > .info-heading p {
+    cursor: pointer;
+    margin-left: 3px;
+    margin-right: 8px;
+}
+
+/* RESUME */
+.resume > .para {
+    margin-top: -0.75rem;
+    margin-bottom: 1rem;
+}
+.resume > .boxbox {
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: flex-start;
+    margin: 8px 0px;
+}
+.resume > .boxbox p{
+    margin: 0 8px;
+}
+
+/* OTHER-DETAILS */
+.other-details > .para {
+    margin-top: -0.75rem;
+    margin-bottom: 1rem;
+}
+.other-details > .boxbox {
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: flex-start;
+    margin: 8px 0px;
+}
+.other-details .boxbox p{
+    margin: 0 8px;
+}
+
+.upload {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+}
 
 /* COMMON */
+.add-info {
+    display: flex;
+    align-items: center;
+}
+.right-arrow {
+    cursor: pointer;
+}
+
+
 .info-heading {
     justify-content: space-between;
     margin-bottom: var(--twe-px);
@@ -163,7 +227,7 @@ section{
     font-size: var(--fou-px);
     line-height: 1.25rem;
     font-weight: 400;
-    color: rgb(140, 133, 148);
+    color: var(--grey-txt);
 }
 .placeholder-2 {
     font-size: var(--fou-px);
@@ -172,6 +236,22 @@ section{
     color: rgb(25, 10, 40);
     margin-right: 1rem;
 }
+.grey-txt {
+    font-size: var(--twe-px);
+    line-height: 1rem;
+    font-weight: 400;
+    color: var(--grey-txt);
+}
+.heading-inside {
+    justify-content: space-between;
+    margin-bottom: var(--twe-px);
+    padding: 0.75px;
+}
+.para-inside {
+    margin-top: -0.5rem;
+}
+
+
 .boxbox {
     background-color: var(--bg-white);
     display: flex;
@@ -179,5 +259,19 @@ section{
     align-items: center;
     width: 37vw;
     padding: var(--twe-px);
-    margin-bottom: 8px;
+}
+.green-adder-box {
+    border-radius: 4px;
+    border: 1px solid var(--green-link);
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    font-weight: 600;
+    color: var(--green-link);
+    padding: 10px 0px;
+    margin-top: 15px;
+    cursor: pointer;
+    width: 100%;
 }

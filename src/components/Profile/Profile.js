@@ -70,31 +70,94 @@ function Profile() {
         </div>
 
         <div className="other-info">
+
           <div className="work-exp">
             <h1 className="heading info-heading">Work Experience</h1>
-            <div className="exp border-grey boxbox">
+            <div className="border-grey boxbox">
               <p className="placeholder">Total Years of experience:</p>
-              <div className="add-info placeholder-2">
-                <p>Fresher</p>
+              <div className="add-info">
+                <p className="placeholder-2">Fresher</p>
+                <svg className="right-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#1F8268"><path d="M8.355 6.316a.985.985 0 0 0 0 1.515l4.714 4.17-4.714 4.17a.985.985 0 0 0 0 1.515c.474.419 1.24.419 1.713 0l5.577-4.933a.985.985 0 0 0 0-1.515l-5.577-4.933c-.461-.408-1.239-.408-1.713.01Z"></path></svg>
               </div>
             </div>
           </div>
+
           <div className="education">
-            <h1 className="heading info-heading">Education</h1>
-            <div className="exp border-grey boxbox">
+            <div className="flex info-heading">
+              <h1 className="heading">Education</h1>
+              <div className="flex">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none"><path fill="#1F8268" d="M10.57 6.762H6.762v3.81a.764.764 0 0 1-.762.761.764.764 0 0 1-.762-.762v-3.81h-3.81A.764.764 0 0 1 .667 6c0-.42.343-.762.762-.762h3.81v-3.81c0-.419.342-.761.761-.761.42 0 .762.342.762.762v3.809h3.81c.419 0 .762.343.762.762s-.343.762-.762.762Z"></path></svg>
+                <p className="link">Add</p>
+              </div>
+            </div>
+            <div className="border-grey boxbox">
               <p className="placeholder">Highest education:</p>
-              <div className="add-info placeholder-2">
-                <p>Graduate</p>
+              <div className="add-info">
+                <p className="placeholder-2">Graduate</p>
+                <svg className="right-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#1F8268"><path d="M8.355 6.316a.985.985 0 0 0 0 1.515l4.714 4.17-4.714 4.17a.985.985 0 0 0 0 1.515c.474.419 1.24.419 1.713 0l5.577-4.933a.985.985 0 0 0 0-1.515l-5.577-4.933c-.461-.408-1.239-.408-1.713.01Z"></path></svg>
               </div>
             </div>
           </div>
+
           <div className="resume">
             <h1 className="heading info-heading">Resume</h1>
-            <h1 className="para">Only</h1>
+            <h1 className="para grey-txt">Only visible to HRs</h1>
+            <div className="border-grey boxbox">
+              <div className="para grey-txt">Uploading your resume helps HRs learn more about you</div>
+              <div className="green-adder-box para">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none"><path fill="#1F8268" d="M10.57 6.762H6.762v3.81a.764.764 0 0 1-.762.761.764.764 0 0 1-.762-.762v-3.81h-3.81A.764.764 0 0 1 .667 6c0-.42.343-.762.762-.762h3.81v-3.81c0-.419.342-.761.761-.761.42 0 .762.342.762.762v3.809h3.81c.419 0 .762.343.762.762s-.343.762-.762.762Z"></path></svg>
+                <p>Add Resume</p>
+              </div>
+            </div>
           </div>
+
           <div className="other-details">
             <h1 className="heading info-heading">Other Details</h1>
+            <h1 className="para grey-txt">Only visible to HRs</h1>
+
+            <div className="border-grey boxbox">
+              <div className="upload">
+                <h1 className="heading heading-inside">Preferred job title/role</h1>
+                <svg className="right-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#1F8268"><path d="M8.355 6.316a.985.985 0 0 0 0 1.515l4.714 4.17-4.714 4.17a.985.985 0 0 0 0 1.515c.474.419 1.24.419 1.713 0l5.577-4.933a.985.985 0 0 0 0-1.515l-5.577-4.933c-.461-.408-1.239-.408-1.713.01Z"></path></svg>
+              </div>
+              <div className="para-inside grey-txt">Uploading your resume helps HRs learn more about you</div>
+            </div>
+
+            <div className="border-grey boxbox">
+              <div className="upload">
+                <h1 className="heading heading-inside">Location</h1>
+                <svg className="right-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#1F8268"><path d="M8.355 6.316a.985.985 0 0 0 0 1.515l4.714 4.17-4.714 4.17a.985.985 0 0 0 0 1.515c.474.419 1.24.419 1.713 0l5.577-4.933a.985.985 0 0 0 0-1.515l-5.577-4.933c-.461-.408-1.239-.408-1.713.01Z"></path></svg>
+              </div>
+              <div className="para-inside grey-txt">Uploading your resume helps HRs learn more about you</div>
+            </div>
+
+            <div className="border-grey boxbox">
+              <div className="upload">
+                <h1 className="heading heading-inside">Job preferences</h1>
+                <svg className="right-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#1F8268"><path d="M8.355 6.316a.985.985 0 0 0 0 1.515l4.714 4.17-4.714 4.17a.985.985 0 0 0 0 1.515c.474.419 1.24.419 1.713 0l5.577-4.933a.985.985 0 0 0 0-1.515l-5.577-4.933c-.461-.408-1.239-.408-1.713.01Z"></path></svg>
+              </div>
+              <div className="para-inside grey-txt">Uploading your resume helps HRs learn more about you</div>
+            </div>
+
+            <div className="border-grey boxbox">
+              <h1 className="heading heading-inside">Documents & assets</h1>
+              <div className="para-inside grey-txt">Uploading your resume helps HRs learn more about you</div>
+              <div className="green-adder-box para">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none"><path fill="#1F8268" d="M10.57 6.762H6.762v3.81a.764.764 0 0 1-.762.761.764.764 0 0 1-.762-.762v-3.81h-3.81A.764.764 0 0 1 .667 6c0-.42.343-.762.762-.762h3.81v-3.81c0-.419.342-.761.761-.761.42 0 .762.342.762.762v3.809h3.81c.419 0 .762.343.762.762s-.343.762-.762.762Z"></path></svg>
+                <p>Add Document & assets</p>
+              </div>
+            </div>
+
+            <div className="border-grey boxbox">
+              <div className="upload">
+                <h1 className="heading heading-inside">Basic details</h1>
+                <svg className="right-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#1F8268"><path d="M8.355 6.316a.985.985 0 0 0 0 1.515l4.714 4.17-4.714 4.17a.985.985 0 0 0 0 1.515c.474.419 1.24.419 1.713 0l5.577-4.933a.985.985 0 0 0 0-1.515l-5.577-4.933c-.461-.408-1.239-.408-1.713.01Z"></path></svg>
+              </div>
+              <div className="para-inside grey-txt">Uploading your resume helps HRs learn more about you</div>
+            </div>
+
           </div>
+          
         </div>
 
       </section>
