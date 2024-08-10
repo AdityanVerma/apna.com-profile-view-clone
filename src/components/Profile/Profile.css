@@ -1,0 +1,183 @@
+:root{
+    --bg-white: #fff;
+    --bg-grey: rgb(244, 245, 247);
+    --para-color: rgb(25, 10, 40);
+    --green-link: rgb(31, 130, 104);
+
+    --twe-px: 0.75rem;
+    --fou-px: 0.875rem;
+}
+
+/* ---------------- Section ---------------- */
+main{
+    background-color: var(--bg-grey);
+    height: 200vh;
+}
+section{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+    margin: auto;
+    height: 100%;
+    width: 80vw;
+    padding-top: 3.5rem;
+}
+
+/* ---------------- Personal Information ---------------- */
+.personal-info{
+    grid-column: 1 / 3;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1rem;
+}
+
+/* Profile View */
+.personal-info .profile-view-info{
+    background-color: var(--bg-white);
+    display: flex;
+    gap: 1rem;
+    height: 12rem;
+    width: 406px;
+    padding: 1rem var(--twe-px);
+}
+
+
+.profile-picture{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    width: 28%;
+    cursor: pointer;
+}
+.profile-picture .profile-picture-container{
+    background-color: var(--bg-grey);
+    padding: 1.75rem;
+    border-radius: 50%;
+}
+
+
+.profile-view .link-container {
+    width: 100%;
+    cursor: default;
+}
+.profile-view .link-container .link-url {
+    display: flex; /* Use flexbox to align text and SVG */
+    align-items: center; /* Vertically align the text and SVG */
+    max-width: 190px; /* Control where the text cuts off */
+    overflow: hidden;
+}
+.profile-view .link-container .link-url .link-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-right: 2px;
+}
+.profile-view .link-container .link-url .link-icon {
+    flex-shrink: 0;
+}
+
+
+.container-2{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 10px 0;
+    text-overflow: initial;
+    height: 70%;
+}
+.container-2 svg {
+    margin-top: 2px;
+    margin-right: 10px;
+}
+.college,
+.address,
+.share {
+    height: 33.33%;
+}
+.share a {
+    color: var(--green-link);
+    font-weight: 600;
+}
+
+
+/* Contact View */
+/* MAIN */
+.personal-info .contact-info{
+    background-color: var(--bg-white);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1.25rem;
+    max-height: 20rem;
+    width: 406px;
+    padding: 1.25rem;
+}
+
+/* COMMON */
+.head {
+    font-weight: 400;
+    margin-bottom: 4px;
+    font-size: var(--twe-px);
+    color: rgb(140, 133, 148);
+    line-height: 1rem;
+}
+.content {
+    font-weight: 400;
+    font-size: var(--fou-px);
+    line-height: 1.25rem;
+    color: rgb(25, 10, 40);
+}
+.link {
+    color: rgb(31, 130, 104);
+    font-weight: 600;
+    font-size: var(--fou-px);
+    line-height: 1.25rem;
+    cursor: pointer;
+}
+
+
+/* ---------------- Other Information ---------------- */
+/* MAIN */
+.other-info{
+    grid-column: 3 / 7;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* WORK-EXPERIENCE */
+.work-exp {
+    margin-top: -2rem;
+}
+
+
+/* COMMON */
+.info-heading {
+    justify-content: space-between;
+    margin-bottom: var(--twe-px);
+    margin-top: 2rem;
+    padding: 0.75px;
+}
+.placeholder {
+    font-size: var(--fou-px);
+    line-height: 1.25rem;
+    font-weight: 400;
+    color: rgb(140, 133, 148);
+}
+.placeholder-2 {
+    font-size: var(--fou-px);
+    font-weight: 400;
+    line-height: 1rem;
+    color: rgb(25, 10, 40);
+    margin-right: 1rem;
+}
+.boxbox {
+    background-color: var(--bg-white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 37vw;
+    padding: var(--twe-px);
+    margin-bottom: 8px;
+}
