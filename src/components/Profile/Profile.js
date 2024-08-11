@@ -16,7 +16,7 @@ function Profile() {
               </div>
             </div>
             <div className="profile-view">
-              <h1 className="heading textflow">Adityan Verma</h1>
+              <h1 id="name" className="heading textflow">Adityan Verma</h1>
               <div className="link-container">
                 <a className="para link-url" href="http://" target="_blank" rel="noopener noreferrer">
                   <span className="link-text">https://apna.co/adityan-verma-akhh8mk</span>
@@ -82,6 +82,7 @@ function Profile() {
             </div>
           </div>
 
+
           <div className="education">
             <div className="flex info-heading">
               <h1 className="heading">Education</h1>
@@ -90,6 +91,7 @@ function Profile() {
                 <p className="link">Add</p>
               </div>
             </div>
+
             <div className="border-grey boxbox">
               <p className="placeholder">Highest education:</p>
               <div className="add-info">
@@ -97,12 +99,22 @@ function Profile() {
                 <svg className="right-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#1F8268"><path d="M8.355 6.316a.985.985 0 0 0 0 1.515l4.714 4.17-4.714 4.17a.985.985 0 0 0 0 1.515c.474.419 1.24.419 1.713 0l5.577-4.933a.985.985 0 0 0 0-1.515l-5.577-4.933c-.461-.408-1.239-.408-1.713.01Z"></path></svg>
               </div>
             </div>
+
+            <div className="border-grey boxbox-2">
+              <h1 className="heading heading-inside">Spoken English</h1>
+              <div className="para-inside placeholder">Having the required level of English speaking proficiency will help you find job at top companies</div>
+              <div className="green-adder-box para">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none"><path fill="#1F8268" d="M10.57 6.762H6.762v3.81a.764.764 0 0 1-.762.761.764.764 0 0 1-.762-.762v-3.81h-3.81A.764.764 0 0 1 .667 6c0-.42.343-.762.762-.762h3.81v-3.81c0-.419.342-.761.761-.761.42 0 .762.342.762.762v3.809h3.81c.419 0 .762.343.762.762s-.343.762-.762.762Z"></path></svg>
+                <p>Verify now</p>
+              </div>
+            </div>
           </div>
+
 
           <div className="resume">
             <h1 className="heading info-heading">Resume</h1>
             <h1 className="para grey-txt">Only visible to HRs</h1>
-            <div className="border-grey boxbox">
+            <div className="border-grey boxbox-2">
               <div className="para grey-txt">Uploading your resume helps HRs learn more about you</div>
               <div className="green-adder-box para">
                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none"><path fill="#1F8268" d="M10.57 6.762H6.762v3.81a.764.764 0 0 1-.762.761.764.764 0 0 1-.762-.762v-3.81h-3.81A.764.764 0 0 1 .667 6c0-.42.343-.762.762-.762h3.81v-3.81c0-.419.342-.761.761-.761.42 0 .762.342.762.762v3.809h3.81c.419 0 .762.343.762.762s-.343.762-.762.762Z"></path></svg>
@@ -111,35 +123,60 @@ function Profile() {
             </div>
           </div>
 
+
           <div className="other-details">
             <h1 className="heading info-heading">Other Details</h1>
             <h1 className="para grey-txt">Only visible to HRs</h1>
-
-            <div className="border-grey boxbox">
+            <div className="border-grey boxbox-2">
               <div className="upload">
                 <h1 className="heading heading-inside">Preferred job title/role</h1>
                 <svg className="right-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#1F8268"><path d="M8.355 6.316a.985.985 0 0 0 0 1.515l4.714 4.17-4.714 4.17a.985.985 0 0 0 0 1.515c.474.419 1.24.419 1.713 0l5.577-4.933a.985.985 0 0 0 0-1.515l-5.577-4.933c-.461-.408-1.239-.408-1.713.01Z"></path></svg>
               </div>
-              <div className="para-inside grey-txt">Uploading your resume helps HRs learn more about you</div>
+              <div className="para-inside placeholder">Software Development • Website Development • Software Backend Development • Frontend Development</div>
             </div>
-
-            <div className="border-grey boxbox">
+            <div className="border-grey boxbox-2">
               <div className="upload">
                 <h1 className="heading heading-inside">Location</h1>
                 <svg className="right-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#1F8268"><path d="M8.355 6.316a.985.985 0 0 0 0 1.515l4.714 4.17-4.714 4.17a.985.985 0 0 0 0 1.515c.474.419 1.24.419 1.713 0l5.577-4.933a.985.985 0 0 0 0-1.515l-5.577-4.933c-.461-.408-1.239-.408-1.713.01Z"></path></svg>
               </div>
-              <div className="para-inside grey-txt">Uploading your resume helps HRs learn more about you</div>
+              <div className="para-inside placeholder">
+                <span className="input">
+                  <sapn className="link">Add hometown</sapn>
+                  <span>&nbsp;•&nbsp;</span>
+                </span>
+                <span className="input">
+                  <span>Current location</span>
+                  <span>&nbsp;•&nbsp;</span>
+                </span>
+                <span className="input">
+                  <span>Preferred location</span>
+                </span>
+              </div>
             </div>
-
-            <div className="border-grey boxbox">
+            <div className="border-grey boxbox-2">
               <div className="upload">
                 <h1 className="heading heading-inside">Job preferences</h1>
                 <svg className="right-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#1F8268"><path d="M8.355 6.316a.985.985 0 0 0 0 1.515l4.714 4.17-4.714 4.17a.985.985 0 0 0 0 1.515c.474.419 1.24.419 1.713 0l5.577-4.933a.985.985 0 0 0 0-1.515l-5.577-4.933c-.461-.408-1.239-.408-1.713.01Z"></path></svg>
               </div>
-              <div className="para-inside grey-txt">Uploading your resume helps HRs learn more about you</div>
+              <div className="para-inside placeholder">
+                <span id="pet"className="input">
+                  <span>Full Time</span>
+                  <span>&nbsp;•&nbsp;</span>
+                  <span>Part Time</span>
+                  <span>&nbsp;•&nbsp;</span>
+                </span>
+                <span id="pw"className="input">
+                  <span>Work from Home</span>
+                  <span>&nbsp;•&nbsp;</span>
+                  <span>Work from Office</span>
+                  <span>&nbsp;•&nbsp;</span>
+                </span>
+                <span id="ps"className="input">
+                  <span>Day Shift</span>
+                </span>
+              </div>
             </div>
-
-            <div className="border-grey boxbox">
+            <div className="border-grey boxbox-2">
               <h1 className="heading heading-inside">Documents & assets</h1>
               <div className="para-inside grey-txt">Uploading your resume helps HRs learn more about you</div>
               <div className="green-adder-box para">
@@ -147,13 +184,32 @@ function Profile() {
                 <p>Add Document & assets</p>
               </div>
             </div>
-
-            <div className="border-grey boxbox">
+            <div className="border-grey boxbox-2">
               <div className="upload">
                 <h1 className="heading heading-inside">Basic details</h1>
                 <svg className="right-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#1F8268"><path d="M8.355 6.316a.985.985 0 0 0 0 1.515l4.714 4.17-4.714 4.17a.985.985 0 0 0 0 1.515c.474.419 1.24.419 1.713 0l5.577-4.933a.985.985 0 0 0 0-1.515l-5.577-4.933c-.461-.408-1.239-.408-1.713.01Z"></path></svg>
               </div>
-              <div className="para-inside grey-txt">Uploading your resume helps HRs learn more about you</div>
+              <div className="para-inside placeholder">
+                <span className="input name">
+                  <span className="content placeholder">Adityan Verma</span>
+                  <span>&nbsp;•&nbsp;</span>
+                </span>
+                <span className="input email">
+                  <span className="link">Add email id</span>
+                  <span>&nbsp;•&nbsp;</span>
+                </span>
+                <span className="input mobile">
+                  <span className="content placeholder">+91-9310860121</span>
+                  <span>&nbsp;•&nbsp;</span>
+                </span>
+                <span className="input gender">
+                  <span className="content placeholder">male</span>
+                  <span>&nbsp;•&nbsp;</span>
+                </span>
+                <span className="input dob">
+                  <span className="content placeholder">21st Mar 2004</span>
+                </span>
+              </div>
             </div>
 
           </div>

@@ -40,6 +40,20 @@ nav.sticky {
     align-items: center;
     margin: .7rem;
 }
+.downarrow {
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    aspect-ratio: 1/1;
+    height: .5rem;
+    transform: rotate(45deg);
+    margin-right: .5rem;
+    margin-bottom: .15rem;
+}
+.list li:hover, .downarrow:hover {
+    color: rgb(31, 130, 104);
+    border-color: rgb(31, 130, 104);
+    cursor: pointer;
+}
 
 /* Header-Profile */
 .profile-btn .btn-container {
