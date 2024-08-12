@@ -54,6 +54,12 @@ code {
   line-height: 20px;
 }
 
-.flex{
+.flex {
   display: flex;
+}
+
+.flex-acjc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

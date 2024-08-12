@@ -86,7 +86,7 @@ function Profile() {
           <div className="education">
             <div className="flex info-heading">
               <h1 className="heading">Education</h1>
-              <div className="flex">
+              <div className="flex-acjc">
                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none"><path fill="#1F8268" d="M10.57 6.762H6.762v3.81a.764.764 0 0 1-.762.761.764.764 0 0 1-.762-.762v-3.81h-3.81A.764.764 0 0 1 .667 6c0-.42.343-.762.762-.762h3.81v-3.81c0-.419.342-.761.761-.761.42 0 .762.342.762.762v3.809h3.81c.419 0 .762.343.762.762s-.343.762-.762.762Z"></path></svg>
                 <p className="link">Add</p>
               </div>
@@ -100,7 +100,31 @@ function Profile() {
               </div>
             </div>
 
-            <div className="border-grey boxbox-2">
+            <div id="lang-known" className="border-grey boxbox-2">
+              <div className="heading-edit">
+                <h1 className="heading heading-inside">Languages known</h1>
+                <div className="flex-acjc">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none"><path fill="#1F8268" d="M.75 9.185v1.773c0 .164.128.292.292.292h1.773c.076 0 .152-.03.204-.088l6.37-6.364-2.187-2.187L.838 8.975a.286.286 0 0 0-.088.21Zm10.33-6.078a.58.58 0 0 0 0-.823L9.717.92a.58.58 0 0 0-.823 0L7.826 1.987l2.187 2.187 1.068-1.067Z"></path></svg>
+                  <p className="link">Edit</p>
+                </div>
+              </div>
+              <div className="lang-known-lvl flex">
+                <span className="lang-cont lang1">
+                  <span>English</span>
+                  <span className="lvl-cont flex">
+                    <div className="lvl">
+                      <div className="bar-dark"></div>
+                      <div className="bar-dark"></div>
+                      <div className="bar-light"></div>
+                    </div>
+                    Intermediate
+                  </span>
+                </span>
+                <span className="lang-cont lang2">Hindi</span>
+              </div>
+            </div>
+
+            <div id="spoken-eng" className="border-grey boxbox-2">
               <h1 className="heading heading-inside">Spoken English</h1>
               <div className="para-inside placeholder">Having the required level of English speaking proficiency will help you find job at top companies</div>
               <div className="green-adder-box para">

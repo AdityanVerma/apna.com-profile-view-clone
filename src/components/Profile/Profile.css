@@ -7,6 +7,9 @@
 
     --twe-px: 0.75rem;
     --fou-px: 0.875rem;
+
+    --dark-green: rgb(31, 130, 104);
+    --light-green: rgb(160, 197, 189);
 }
 
 /* UNIVERSAL CLASSES */
@@ -159,13 +162,11 @@ section{
 
 /* EDUCATION */
 .education > .info-heading,
-.education > .info-heading > div {
-    align-items: center;
-}
 .education > .info-heading svg {
     overflow: hidden;
 }
-.education > .info-heading p {
+.education > .info-heading p,
+.education .heading-edit p {
     cursor: pointer;
     margin-left: 3px;
     margin-right: 8px;
@@ -177,6 +178,57 @@ section{
 }
 .education .boxbox p{
     margin: 0 8px;
+}
+
+.heading-edit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.lang-cont {
+    flex-shrink: 0;
+    background-color: rgb(244, 242, 246);
+    border: 1px solid rgb(232, 231, 234);
+    color: rgb(130, 116, 133);
+    border-radius: 6px;
+    height: 24px;
+    padding: 6px 8px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+.lang-cont .bar-dark {
+    background-color: var(--dark-green);
+}
+.lang-cont .bar-light {
+    background-color: var(--light-green);
+}
+.lang-cont .lvl {
+    margin: 4px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.lang-cont .lvl div {
+    width: 2px;
+    margin: .5px;
+    height: 4px;
+}
+.lang-cont .lvl div:nth-child(1) {
+    height: 5px;
+}
+.lang-cont .lvl div:nth-child(2) {
+    height: 7px;
+}
+.lang-cont .lvl div:nth-child(3) {
+    height: 9px;
 }
 
 /* RESUME */
