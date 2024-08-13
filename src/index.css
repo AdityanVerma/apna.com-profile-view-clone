@@ -37,6 +37,7 @@ code {
 .border-grey {
   border: 1px solid rgb(228, 228, 228);
   border-radius: 0.75rem;
+  z-index: 5;
 }
 
 .heading {

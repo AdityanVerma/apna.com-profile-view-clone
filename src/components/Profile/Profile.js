@@ -1,13 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Profile.css';
+import Modal from "../Modal/Modal.js"; // Generic Modal
+import ModalContent1 from "../Modal/Modal1/Modal11.js";
+import ModalContent2 from "../Modal/Modal1/Modal12.js";
 
 function Profile() {
+
+  const [currentModal, setCurrentModal] = useState(null);
+
+  const handleOpenModal = (content) => {
+    setCurrentModal(content);
+  };
+
+  const handleCloseModal = () => {
+    setCurrentModal(null);
+  };
+
   return (
     <>
       <main>
-      <section className="font-600">
-
-        <div className="personal-info">
+      <section className="section-cont font-600">
+        
+        {/* ------------------------- Personal Information ------------------------- */}
+        <section className="personal-info">
 
           <div className="profile-view-info border-grey">
             <div className="profile-picture">
@@ -67,22 +82,27 @@ function Profile() {
             </div>
           </div>
 
-        </div>
+        </section>
 
-        <div className="other-info">
 
+
+        {/* ------------------------- Other Information ------------------------- */}
+        <section className="other-info">
+
+          {/* Work Experience */}
           <div className="work-exp">
             <h1 className="heading info-heading">Work Experience</h1>
             <div className="border-grey boxbox">
               <p className="placeholder">Total Years of experience:</p>
               <div className="add-info">
                 <p className="placeholder-2">Fresher</p>
-                <svg className="right-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#1F8268"><path d="M8.355 6.316a.985.985 0 0 0 0 1.515l4.714 4.17-4.714 4.17a.985.985 0 0 0 0 1.515c.474.419 1.24.419 1.713 0l5.577-4.933a.985.985 0 0 0 0-1.515l-5.577-4.933c-.461-.408-1.239-.408-1.713.01Z"></path></svg>
+                <svg onClick={() => handleOpenModal(<ModalContent1 />)} className="right-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#1F8268"><path d="M8.355 6.316a.985.985 0 0 0 0 1.515l4.714 4.17-4.714 4.17a.985.985 0 0 0 0 1.515c.474.419 1.24.419 1.713 0l5.577-4.933a.985.985 0 0 0 0-1.515l-5.577-4.933c-.461-.408-1.239-.408-1.713.01Z"></path></svg>
+                {/* {showModal && <Modal isOpen={showModal} onClose={closeModal} />} */}
               </div>
             </div>
           </div>
 
-
+          {/* Education */}
           <div className="education">
             <div className="flex info-heading">
               <h1 className="heading">Education</h1>
@@ -96,7 +116,60 @@ function Profile() {
               <p className="placeholder">Highest education:</p>
               <div className="add-info">
                 <p className="placeholder-2">Graduate</p>
-                <svg className="right-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#1F8268"><path d="M8.355 6.316a.985.985 0 0 0 0 1.515l4.714 4.17-4.714 4.17a.985.985 0 0 0 0 1.515c.474.419 1.24.419 1.713 0l5.577-4.933a.985.985 0 0 0 0-1.515l-5.577-4.933c-.461-.408-1.239-.408-1.713.01Z"></path></svg>
+                <svg onClick={() => handleOpenModal(<ModalContent2 />)} className="right-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#1F8268"><path d="M8.355 6.316a.985.985 0 0 0 0 1.515l4.714 4.17-4.714 4.17a.985.985 0 0 0 0 1.515c.474.419 1.24.419 1.713 0l5.577-4.933a.985.985 0 0 0 0-1.515l-5.577-4.933c-.461-.408-1.239-.408-1.713.01Z"></path></svg>
+              </div>
+            </div>
+
+            <div id="study" className="flex border-grey boxbox-2">
+              <div class="flex-acjc timestamp">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none"><rect width="39" height="39" x="0.5" y="0.5" fill="#F4F2F6" rx="7.5"></rect><path fill="#8C8594" d="M21.668 25.025c-.463.284-1.055.44-1.668.44-.614 0-1.206-.156-1.67-.44l-7.554-4.634s-.682-.418-.682.53V25.546c0 2.438 4.435 5.065 9.905 5.065s9.906-2.627 9.906-5.065V20.66c0-.76-.485-.388-.485-.388l-7.752 4.754Z"></path><path fill="#D1CED4" d="M32.565 16.705c.58-.356.58-.938 0-1.294l-11.51-5.756c-.58-.356-1.53-.356-2.11 0l-11.51 5.756c-.58.356-.58.938 0 1.294l11.51 7.059c.58.356 1.53.356 2.11 0"></path><path fill="#8C8594" d="M32.088 27.168v-7.796s.006-.369-.213-.247c-.176.098-.607.338-.759.47-.175.152-.136.494-.136.494v7.079c0 .1-.086.149-.127.173a1.345 1.345 0 0 0 .681 2.507 1.347 1.347 0 0 0 .677-2.51c-.04-.023-.123-.07-.123-.17Z"></path><rect width="39" height="39" x="0.5" y="0.5" stroke="#E8E7EA" rx="7.5"></rect></svg>
+                <div className="std-line"></div>
+                <div className="std-dot">·</div>
+              </div>
+              <div className="flex deg-cont">
+                <div className="heading-edit">
+                  <h1 className="heading heading-inside">BE/B.Tech , Computer Science</h1>
+                  <div className="flex-acjc">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none"><path fill="#1F8268" d="M.75 9.185v1.773c0 .164.128.292.292.292h1.773c.076 0 .152-.03.204-.088l6.37-6.364-2.187-2.187L.838 8.975a.286.286 0 0 0-.088.21Zm10.33-6.078a.58.58 0 0 0 0-.823L9.717.92a.58.58 0 0 0-.823 0L7.826 1.987l2.187 2.187 1.068-1.067Z"></path></svg>
+                    <p className="link">Edit</p>
+                  </div>
+                </div>
+                <div className="content">
+                  <span>Delhi Technical Campus, Greater Noida</span>
+                  <span>&nbsp;•&nbsp;</span>
+                  <span>Graduate</span>
+                </div>
+                <div className="skills-cont flex">
+                  <span className="cont-cont flex-acjc">Batch of 2025</span>
+                </div>
+              </div>
+            </div>
+
+            <div id="skill" className="border-grey boxbox-2">
+              <div className="heading-edit">
+                <h1 className="heading heading-inside">Skills </h1>
+                <div className="flex-acjc">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none"><path fill="#1F8268" d="M.75 9.185v1.773c0 .164.128.292.292.292h1.773c.076 0 .152-.03.204-.088l6.37-6.364-2.187-2.187L.838 8.975a.286.286 0 0 0-.088.21Zm10.33-6.078a.58.58 0 0 0 0-.823L9.717.92a.58.58 0 0 0-.823 0L7.826 1.987l2.187 2.187 1.068-1.067Z"></path></svg>
+                  <p className="link">Edit</p>
+                </div>
+              </div>
+              <div className="para-inside placeholder">
+                <span className="count">0&nbsp;</span>
+                <span>skill medals earned</span>
+              </div>
+              <div className="skills-cont flex">
+                <span className="cont-cont flex-acjc">Computer Hardware</span>
+                <span className="cont-cont flex-acjc">Web development</span>
+                <span className="cont-cont flex-acjc">Programming language</span>
+                <span className="cont-cont flex-acjc">Python</span>
+                <span className="cont-cont flex-acjc">Java</span>
+                <span className="cont-cont flex-acjc">JavaScript</span>
+                <span className="cont-cont flex-acjc">C++/C</span>
+                <span className="cont-cont flex-acjc">HTML/CSS</span>
+              </div>
+              <div className="para-inside placeholder flex-acjc">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"><path fill="#8C8594" d="M7.334 4.667h1.333V6H7.334V4.667Zm.667 6.666c.366 0 .666-.3.666-.666V8c0-.367-.3-.667-.666-.667-.367 0-.667.3-.667.667v2.667c0 .366.3.666.667.666Zm0-10A6.67 6.67 0 0 0 1.334 8a6.67 6.67 0 0 0 6.667 6.667A6.67 6.67 0 0 0 14.667 8a6.67 6.67 0 0 0-6.666-6.667Zm0 12A5.34 5.34 0 0 1 2.667 8a5.34 5.34 0 0 1 5.334-5.333A5.34 5.34 0 0 1 13.334 8a5.34 5.34 0 0 1-5.333 5.333Z"></path></svg>
+                <span>&nbsp;Skills with the check mark have been verified by Apna</span>
               </div>
             </div>
 
@@ -109,9 +182,9 @@ function Profile() {
                 </div>
               </div>
               <div className="lang-known-lvl flex">
-                <span className="lang-cont lang1">
+                <span className="cont-cont lang1">
                   <span>English</span>
-                  <span className="lvl-cont flex">
+                  <span className="lvl-cont flex-acjc">
                     <div className="lvl">
                       <div className="bar-dark"></div>
                       <div className="bar-dark"></div>
@@ -120,7 +193,7 @@ function Profile() {
                     Intermediate
                   </span>
                 </span>
-                <span className="lang-cont lang2">Hindi</span>
+                <span className="cont-cont lang2">Hindi</span>
               </div>
             </div>
 
@@ -134,7 +207,7 @@ function Profile() {
             </div>
           </div>
 
-
+          {/* Resume */}
           <div className="resume">
             <h1 className="heading info-heading">Resume</h1>
             <h1 className="para grey-txt">Only visible to HRs</h1>
@@ -147,7 +220,7 @@ function Profile() {
             </div>
           </div>
 
-
+          {/* Other Details */}
           <div className="other-details">
             <h1 className="heading info-heading">Other Details</h1>
             <h1 className="para grey-txt">Only visible to HRs</h1>
@@ -235,12 +308,16 @@ function Profile() {
                 </span>
               </div>
             </div>
-
           </div>
           
-        </div>
+        </section>
 
       </section>
+
+      <Modal isOpen={!!currentModal} onClose={handleCloseModal}>
+        {currentModal}
+      </Modal>
+
       </main>
     </>
   );
