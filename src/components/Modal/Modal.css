@@ -1,10 +1,20 @@
 :root {
+    --main-heading: rgb(25, 10, 40);
+    --sub-heading: rgb(140, 133, 148);
+
     --green-btn-inactive: rgb(31, 130, 104, 0.5);
     --green-btn-active: rgb(31, 130, 104);
+    --bg-active: rgb(77, 57, 81);
+
+    --border-not-selected: rgb(232, 231, 234);
+    --border-selected: rgb(31, 130, 104);
+    
+    --checkbox-not-selected: rgb(140, 133, 148);
+    --checkbox-selected: rgb(31, 130, 104);
 }
 
-/* ---------------- UNIVERSAL CLASSES ---------------- */
-/* Modal Container */
+/* ---------------------------------------- UNIVERSAL CLASSES ---------------------------------------- */
+/* ------------- MODAL-CONTAINER ------------- */
 .overlay {
     background-color: rgba(0, 0, 0, 0.7);
     position: fixed;
@@ -19,7 +29,7 @@
     margin-top: 5rem;
 }
 
-/* Modal Content */
+/* --- MODAL-CONTENT --- */
 .modal-content {
     background-color: #fff;
     border-radius: 10px;
@@ -29,12 +39,12 @@
     margin-bottom: 5rem;
 }
 
-/* Heading Section */
+/* --- HEADING-SECTION --- */
 .heading-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px;
+    padding: 23px;
     border-bottom: 1px solid rgb(228, 228, 228);
 }
 .heading-section .heading-modal {
@@ -45,20 +55,44 @@
     cursor: pointer;
 }
 
-/* Content Section */
+.heading-bunch {
+    text-align: left;
+}
+.heading-bunch .sub-heading {
+    color: var(--sub-heading);
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    margin-top: 5px;
+}
+
+/* --- CONTENT-SECTION --- */
 .content-section {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
 }
-.content-section .content {
+.modal-heading {
+    display: flex;
+    line-height: 1.25rem;
+    font-size: 0.85rem;
+    font-weight: 550;
+}
+.modal-content-inside {
     flex-direction: column;
     align-items: flex-start;
     width: 460px;
+    max-height: 415px;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.modal-content-inside::-webkit-scrollbar {
+    display: none;
 }
 
-/* Save Button */
+/* --- SAVE-BUTTON --- */
 .save-section {
     display: flex;
     justify-content: center;
@@ -73,4 +107,576 @@
     border: none;
     border-radius: 4px;
     color: white;
+}
+
+
+/* ---------------------------------------- MODAL-1 ---------------------------------------- */
+/* ---------------------------------------- MODAL-2 ---------------------------------------- */
+/* ---------------------------------------- MODAL-3 ---------------------------------------- */
+/* ---------------------------------------- MODAL-4 ---------------------------------------- */
+/* --- SELECTION-BUTTONS --- */
+
+.selection {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.selection > label {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    padding: 6px 12px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    background-color: #fff;
+    border: 0.1px solid rgb(184, 176, 185);
+    border-radius: 24px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.selection input[type="radio"] {
+    display: none;
+}
+.selection input[type="radio"]:checked + label {
+    color: #fff;
+    font-weight: 450;
+    background-color: var(--bg-active);
+    border-color: var(--bg-active);
+}
+
+
+/* ---------------------------------------- MODAL-2 ---------------------------------------- */
+/* ---------------------------------------- MODAL-4 ---------------------------------------- */
+/* --- FORM --- */
+.entry-form {
+    width: 460px;
+    margin-top: 20px
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group > .modal-heading{
+    margin-bottom: 5px;
+}
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="tel"],
+select {
+    height: 40px;
+    width: 100%;
+    padding: 8px;
+    font-size: 0.9rem;
+    font-weight: 400;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.date-inputs {
+    display: flex;
+    gap: 10px;
+}
+.date-inputs select {
+    width: 50%;
+}
+
+/* ---------------------------------------- MODAL-7 ---------------------------------------- */
+/* ---------------------------------------- MODAL-10 ---------------------------------------- */
+/* --- DROPDOWN --- */
+.dropdown {
+    margin-top: 1rem;
+    padding: 1rem;
+    width: 100%;
+    transition: all 0.3 ease-in-out;
+}
+.dropdown .dropdown-head {
+    justify-content: space-between;
+    width: 100%;
+    cursor: pointer;
+}
+.dropdown .dropdown-head .dropdown-txt {
+    gap: 8px;
+}
+
+.dropdown .dropdown-head .dropdown-toggle {
+    background-color: inherit;
+    cursor: pointer;
+    border: none;
+}
+.dropdown .dropdown-head .dropdown-toggle svg {
+    transition: transform 0.3s ease;
+}
+.dropdown .dropdown-head .dropdown-toggle.rotated svg {
+    transform: rotate(180deg);
+}
+
+
+/* ---------------------------------------- MODAL-5 ---------------------------------------- */
+/* ---------------------------------------- MODAL-9 ---------------------------------------- */
+.skills-section {
+    height: 410px;
+}
+.skills-section label {
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+    color: var(--main-heading);
+}
+.skills-section .modal-sub-heading {
+    color: var(--sub-heading);
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+.skills-section input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 1rem 0;
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+.skill-tag {
+    background-color: var(--bg-active);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+.skill-tag .skill-name {
+    font-size: 14px;
+    font-weight: 400;
+}
+.skill-tag .remove-icon {
+    width: 20px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.view-more {
+    width: 3rem;
+    padding: 5px .5rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.view-more .view-more-number {
+    display: inline-block;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+
+/* ---------------------------------------- MODAL-6 ---------------------------------------- */
+/* ---------------------------------------- MODAL-11 ---------------------------------------- */
+/* --- CHECKBOXES --- */
+.border-box {
+    background-color: transparent;
+    border: 1px solid var(--border-not-selected);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    height: 48px;
+    width: 100%;
+    padding: 12px 7px 12px 16px;
+    margin: 4px 0;
+    border-radius: 4px;
+}
+.border-box:first-child {
+    flex-direction: column;
+}
+
+.choice-cont {
+    width: 100%;
+    justify-content: space-between;
+}
+.check {
+    cursor: pointer;
+    margin: 0;
+    display: inline-flex;
+    outline: 0;
+    position: relative;
+    align-items: center;
+    user-select: none;
+    border-radius: 0;
+    vertical-align: middle;
+    justify-content: center;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+.checkBox-cont {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    font-size: 30px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.checkBox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 22px;
+    width: 22px;
+    border: 3px solid var(--border-not-selected);
+    border-radius: 5px;
+}
+.checkBox-cont input:checked ~ .checkmark {
+    background-color: var(--checkbox-selected);
+    border: 3px solid var(--border-selected);
+}
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.checkBox-cont input:checked ~ .checkmark:after {
+    display: block;
+}
+.border-box:has(.checkBox-cont input:checked) {
+    border-color: var(--border-selected);
+}
+.checkBox-cont .checkmark:after {
+    left: 5px;
+    width: 5px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 2.5px 2.5px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+/* ---------------------------------------- MODAL-7 ---------------------------------------- */
+/* --- SPOKEN-ENGLISH-SECTION --- */
+.spoken-eng-sec1 > .modal-heading {
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+.things {
+    gap: 0.5rem;
+}
+.things > .para{
+    padding: 8px 10px;
+    width: 100%;
+    text-align: center;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-top: 8px;
+}
+.things  svg {
+    margin-right: 0.4rem;
+}
+
+/* AUDIO-SECTION */
+.audio {
+    margin-top: 2rem;
+    width: 100%;
+}
+.audio-player-cont {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    margin-top: 8px;
+}
+.audio-player button {
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+}
+.progress-bar-time {
+    width: 100%;
+}
+.progress-bar {
+    position: relative;
+    flex-grow: 1;
+    left: 0%;
+    width: 31.3126%;
+    height: 5px;
+    background-color: rgba(77, 57, 81, 0.5);
+    margin: 0 1rem;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.progress {
+    height: 100%;
+    background-color: rgb(77, 57, 81);
+    border-radius: 5px;
+}
+.progress-picker {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    background-color: rgb(77, 57, 81);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.time {
+    margin: 0 5px;
+    color: rgb(77, 57, 81);
+}
+.time .duration {
+    margin: 0 5px;
+    color: rgb(77, 57, 81, 0.6);
+}
+
+/* TIPS-SECTION */
+.tips-section {
+    width: 100%;
+}
+.tips-section > hr {
+    margin: 1rem 0;
+    width: 100%;
+}
+.tips-section ul {
+    list-style: none;
+    padding: 0;
+}
+.tips-section li {
+    text-align: left;
+    padding: 8px 0;
+    gap: 12px;
+}
+.tips-section .tips-dropdown-txt .maintxt {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: var(--main-heading);
+    margin: 0px;
+}
+.tips-section .tips-dropdown-txt .subtxt {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: var(--sub-heading);
+    padding-top: 4px;
+    margin: 0px;
+}
+
+.record-audio {
+    background-color: rgb(244, 242, 246);
+    padding: 2rem 0;
+    margin: 2rem 0;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+.record-txt {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    margin-left: 12px;
+    color: var(--checkbox-selected);
+}
+
+
+/* ---------------------------------------- MODAL-8 ---------------------------------------- */
+.resume-cont {
+    width: 100%;
+    height: 200px;
+}
+.resume-upload {
+    width: 100%;
+    padding: 1.7rem;
+    border: 1px dashed rgb(209, 206, 212);
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+.resume-upload .upload-img {
+    overflow: hidden;
+}
+.resume-upload .upload-txt {
+    color: var(--sub-heading);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.25rem;
+    margin: 10px;
+}
+.guidtxt {
+    color: var(--sub-heading);
+    font-size: 12px;
+    margin-top: 0.25rem;
+    text-align: left;
+}
+
+/* ---------------------------------------- MODAL-10 ---------------------------------------- */
+/* --- PREFERED-JOB-CITY-SECTION --- */
+.selector-cont {
+    position: relative;
+    margin: 1rem 0;
+}
+.selector-cont .custom-select-btn-cont {
+    text-align: left;
+}
+.selector-cont .custom-select-btn-cont > .custom-select-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 8px 1rem;
+    margin: 1rem 0;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    cursor: text;
+}
+.selector-cont .custom-select-btn-cont > .custom-select-btn > label {
+    font-size: 13px;
+}
+.selector-cont .custom-select-btn-cont > .custom-select-btn svg {
+    cursor: pointer;
+}
+.selector-cont .custom-select-btn-cont > .custom-select-btn:hover {
+    border: 1px solid black;
+}
+.selector-cont .custom-select-btn-cont > .custom-select-btn:focus {
+    border: 2px solid var(--border-selected);
+}
+
+.job-city-content {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid var(--border-not-selected);
+    border-radius: 0.25rem;
+    z-index: 100;
+    width: 100%;
+    justify-content: flex-start;
+    max-height: 250px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.job-city-content .search-box,
+.job-city-content .job-city-item {
+    margin: 1rem;
+}
+.job-city-content .search-box {
+    position: sticky;
+    border: 1px solid #ccc;
+    font-size: 12px;
+    width: 93%;
+    display: flex;
+    flex: 0 1 auto;
+    padding: 8px 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    margin-bottom: 0;
+    cursor: text;
+}
+.job-city-content .job-city-item {
+    margin-top: 0;
+}
+.job-city-content .job-city-item .city {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-top: 1rem;
+    padding: 0 0.5rem;
+}
+
+/* --- CURRENT-LOCATION-SECTION --- */
+.current-location-section > .modal-heading {
+    justify-content: space-between;
+}
+.current-loc-btn {
+    gap: 0.25rem;
+}
+.current-loc-btn .link {
+    font-size: 12px;
+}
+
+/* --- HOMETOWN-SECTION --- */
+.hometown-section > .entry-form > .form-group input:hover {
+    border: 1px solid black;
+}
+.hometown-section > .entry-form > .form-group input:focus {
+    border: 2px solid var(--border-selected);
+}
+
+
+/* ---------------------------------------- MODAL-11 ---------------------------------------- */
+.employment-section > .border-box,
+.workplaces-section > .border-box,
+.shift-section > .border-box {
+    margin: 1rem 0;
+}
+
+
+/* ---------------------------------------- MODAL-12 ---------------------------------------- */
+/* --- UPLOAD-BUTTONS --- */
+.uploads-section {
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.uploads-section > .flex-acjc {
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: 5px;
+}
+.uploads-section > .flex-acjc .upload-btn {
+    background-color: inherit;
+    color: rgb(31, 130, 104);
+    border: 1px solid var(--border-selected);
+    border-radius: 0.25rem;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+    gap: 4px;
+}
+
+/* CHECKBOXES */
+.checkbox-50 {
+    flex-wrap: wrap;
+    gap: 2%;
+    margin: 1rem 0;
+}
+.checkbox-50 > .border-box {
+    width: 49%;
+    margin-bottom: 2%;
+}
+
+
+/* ---------------------------------------- MODAL-13 ---------------------------------------- */
+.modal13 .entry-form {
+    margin-top: 0;
+}
+.modal13 .entry-form .form-group {
+    margin-bottom: 1rem;
+}
+.form-dropdown option {
+    padding: 156px;
+    color: #333;
+}
+.form-dropdown:focus {
+    outline: none;
+    border: 2px solid var(--green-btn-active);
 }

@@ -168,8 +168,8 @@ main {
 .education > .info-heading svg {
     overflow: hidden;
 }
-.education > .info-heading p,
-.education .heading-edit p {
+.education > .info-heading > p,
+.education .heading-edit > p {
     cursor: pointer;
     margin-left: 3px;
     margin-right: 8px;

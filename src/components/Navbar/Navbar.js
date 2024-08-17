@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 import logo from "../../assets//img/logo.png";
-import profImg from "../../assets//img/profile.png";
+import NavbarDropdown from './navbar-dropdown.js';
 
 function Navbar() {
   const [ sticky, setSticky ] = useState(false);
@@ -26,12 +26,7 @@ function Navbar() {
           <li>Career Compass <div className="downarrow"></div></li>
           <li>Community <div className="downarrow"></div></li>
         </div>
-        <div className="profile-btn">
-          <button type="button" className="btn-container">
-            <img src={profImg} alt="img" />
-            <div className="downarrow"></div>
-          </button>
-        </div>
+        <NavbarDropdown />
       </div>
       </nav>
     </>

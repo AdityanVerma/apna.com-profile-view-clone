@@ -1,8 +1,7 @@
 import React from 'react';
-import '../Modal.css';
-import './Modal1.css';
+import './Modal.css';
 
-function Modal({onClose}) {
+function Modal1({onClose}) {
 
   return (
     <>
@@ -16,12 +15,15 @@ function Modal({onClose}) {
             </div>
             
             <div className="content-section">
-              <div className="flex content">
-                <label className="heading">Experience level</label>
-                <div className="selection">
-                  <button active id="fresher" className="para" type="button">Fresher</button>
-                  <button id="experienced" className="para" type="button">Experienced</button>
-                </div>
+              <div className="flex modal-content-inside">
+                <h1 className="modal-heading">Experience level</h1>
+                <form className="selection">
+                  <input type="radio" id="diploma" name="exp-lvl" value="Fresher" checked="checked" />
+                  <label for="diploma">Fresher</label>
+
+                  <input type="radio" id="experienced" name="exp-lvl" value="Experienced" />
+                  <label for="experienced">Experienced</label>
+                </form>
               </div>
             </div>
 
@@ -35,4 +37,4 @@ function Modal({onClose}) {
   );
 };
 
-export default Modal;
+export default Modal1;

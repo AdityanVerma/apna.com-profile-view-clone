@@ -1,20 +1,34 @@
 import React, { useState } from 'react';
 import './Profile.css';
-import Modal from "../Modal/Modal.js"; // Generic Modal
-import ModalContent1 from "../Modal/Modal1/Modal11.js";
-import ModalContent2 from "../Modal/Modal1/Modal12.js";
+import Modal1 from "../Modal/Modal1.js";
+import Modal2 from "../Modal/Modal2.js";
+import Modal3 from "../Modal/Modal3.js";
+import Modal4 from "../Modal/Modal4.js";
+import Modal5 from "../Modal/Modal5.js";
+import Modal6 from "../Modal/Modal6.js";
+import Modal7 from "../Modal/Modal7.js";
+import Modal8 from "../Modal/Modal8.js";
+import Modal9 from "../Modal/Modal9.js";
+import Modal10 from "../Modal/Modal10.js";
+import Modal11 from "../Modal/Modal11.js";
+import Modal12 from "../Modal/Modal12.js";
+import Modal13 from "../Modal/Modal13.js";
 
 function Profile() {
 
-  const [currentModal, setCurrentModal] = useState(null);
-
-  const handleOpenModal = (content) => {
-    setCurrentModal(content);
-  };
-
-  const handleCloseModal = () => {
-    setCurrentModal(null);
-  };
+  const [showModal1, setShowModal1] = useState(false);
+  const [showModal2, setShowModal2] = useState(false);
+  const [showModal3, setShowModal3] = useState(false);
+  const [showModal4, setShowModal4] = useState(false);
+  const [showModal5, setShowModal5] = useState(false);
+  const [showModal6, setShowModal6] = useState(false);
+  const [showModal7, setShowModal7] = useState(false);
+  const [showModal8, setShowModal8] = useState(false);
+  const [showModal9, setShowModal9] = useState(false);
+  const [showModal10, setShowModal10] = useState(false);
+  const [showModal11, setShowModal11] = useState(false);
+  const [showModal12, setShowModal12] = useState(false);
+  const [showModal13, setShowModal13] = useState(false);
 
   return (
     <>
@@ -96,8 +110,8 @@ function Profile() {
               <p className="placeholder">Total Years of experience:</p>
               <div className="add-info">
                 <p className="placeholder-2">Fresher</p>
-                <svg onClick={() => handleOpenModal(<ModalContent1 />)} className="right-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#1F8268"><path d="M8.355 6.316a.985.985 0 0 0 0 1.515l4.714 4.17-4.714 4.17a.985.985 0 0 0 0 1.515c.474.419 1.24.419 1.713 0l5.577-4.933a.985.985 0 0 0 0-1.515l-5.577-4.933c-.461-.408-1.239-.408-1.713.01Z"></path></svg>
-                {/* {showModal && <Modal isOpen={showModal} onClose={closeModal} />} */}
+                <svg onClick={() => setShowModal1(true)} className="right-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#1F8268"><path d="M8.355 6.316a.985.985 0 0 0 0 1.515l4.714 4.17-4.714 4.17a.985.985 0 0 0 0 1.515c.474.419 1.24.419 1.713 0l5.577-4.933a.985.985 0 0 0 0-1.515l-5.577-4.933c-.461-.408-1.239-.408-1.713.01Z"></path></svg>
+                {showModal1 && <Modal1 onClose={() => setShowModal1(false)} />}
               </div>
             </div>
           </div>
@@ -108,7 +122,8 @@ function Profile() {
               <h1 className="heading">Education</h1>
               <div className="flex-acjc">
                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none"><path fill="#1F8268" d="M10.57 6.762H6.762v3.81a.764.764 0 0 1-.762.761.764.764 0 0 1-.762-.762v-3.81h-3.81A.764.764 0 0 1 .667 6c0-.42.343-.762.762-.762h3.81v-3.81c0-.419.342-.761.761-.761.42 0 .762.342.762.762v3.809h3.81c.419 0 .762.343.762.762s-.343.762-.762.762Z"></path></svg>
-                <p className="link">Add</p>
+                <p onClick={() => setShowModal2(true)} className="link">Add</p>
+                {showModal2 && <Modal2 onClose={() => setShowModal2(false)} />}
               </div>
             </div>
 
@@ -116,7 +131,8 @@ function Profile() {
               <p className="placeholder">Highest education:</p>
               <div className="add-info">
                 <p className="placeholder-2">Graduate</p>
-                <svg onClick={() => handleOpenModal(<ModalContent2 />)} className="right-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#1F8268"><path d="M8.355 6.316a.985.985 0 0 0 0 1.515l4.714 4.17-4.714 4.17a.985.985 0 0 0 0 1.515c.474.419 1.24.419 1.713 0l5.577-4.933a.985.985 0 0 0 0-1.515l-5.577-4.933c-.461-.408-1.239-.408-1.713.01Z"></path></svg>
+                <svg onClick={() => setShowModal3(true)} className="right-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#1F8268"><path d="M8.355 6.316a.985.985 0 0 0 0 1.515l4.714 4.17-4.714 4.17a.985.985 0 0 0 0 1.515c.474.419 1.24.419 1.713 0l5.577-4.933a.985.985 0 0 0 0-1.515l-5.577-4.933c-.461-.408-1.239-.408-1.713.01Z"></path></svg>
+                {showModal3 && <Modal3 onClose={() => setShowModal3(false)} />}
               </div>
             </div>
 
@@ -131,7 +147,8 @@ function Profile() {
                   <h1 className="heading heading-inside">BE/B.Tech , Computer Science</h1>
                   <div className="flex-acjc">
                     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none"><path fill="#1F8268" d="M.75 9.185v1.773c0 .164.128.292.292.292h1.773c.076 0 .152-.03.204-.088l6.37-6.364-2.187-2.187L.838 8.975a.286.286 0 0 0-.088.21Zm10.33-6.078a.58.58 0 0 0 0-.823L9.717.92a.58.58 0 0 0-.823 0L7.826 1.987l2.187 2.187 1.068-1.067Z"></path></svg>
-                    <p className="link">Edit</p>
+                    <p onClick={() => setShowModal4(true)} className="link">Edit</p>
+                    {showModal4 && <Modal4 onClose={() => setShowModal4(false)} />}
                   </div>
                 </div>
                 <div className="content">
@@ -150,7 +167,8 @@ function Profile() {
                 <h1 className="heading heading-inside">Skills </h1>
                 <div className="flex-acjc">
                   <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none"><path fill="#1F8268" d="M.75 9.185v1.773c0 .164.128.292.292.292h1.773c.076 0 .152-.03.204-.088l6.37-6.364-2.187-2.187L.838 8.975a.286.286 0 0 0-.088.21Zm10.33-6.078a.58.58 0 0 0 0-.823L9.717.92a.58.58 0 0 0-.823 0L7.826 1.987l2.187 2.187 1.068-1.067Z"></path></svg>
-                  <p className="link">Edit</p>
+                  <p onClick={() => setShowModal5(true)} className="link">Edit</p>
+                  {showModal5 && <Modal5 onClose={() => setShowModal5(false)} />}
                 </div>
               </div>
               <div className="para-inside placeholder">
@@ -178,7 +196,8 @@ function Profile() {
                 <h1 className="heading heading-inside">Languages known</h1>
                 <div className="flex-acjc">
                   <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none"><path fill="#1F8268" d="M.75 9.185v1.773c0 .164.128.292.292.292h1.773c.076 0 .152-.03.204-.088l6.37-6.364-2.187-2.187L.838 8.975a.286.286 0 0 0-.088.21Zm10.33-6.078a.58.58 0 0 0 0-.823L9.717.92a.58.58 0 0 0-.823 0L7.826 1.987l2.187 2.187 1.068-1.067Z"></path></svg>
-                  <p className="link">Edit</p>
+                  <p onClick={() => setShowModal6(true)} className="link">Edit</p>
+                  {showModal6 && <Modal6 onClose={() => setShowModal6(false)} />}
                 </div>
               </div>
               <div className="lang-known-lvl flex">
@@ -200,10 +219,11 @@ function Profile() {
             <div id="spoken-eng" className="border-grey boxbox-2">
               <h1 className="heading heading-inside">Spoken English</h1>
               <div className="para-inside placeholder">Having the required level of English speaking proficiency will help you find job at top companies</div>
-              <div className="green-adder-box para">
+              <div onClick={() => setShowModal7(true)} className="green-adder-box para">
                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none"><path fill="#1F8268" d="M10.57 6.762H6.762v3.81a.764.764 0 0 1-.762.761.764.764 0 0 1-.762-.762v-3.81h-3.81A.764.764 0 0 1 .667 6c0-.42.343-.762.762-.762h3.81v-3.81c0-.419.342-.761.761-.761.42 0 .762.342.762.762v3.809h3.81c.419 0 .762.343.762.762s-.343.762-.762.762Z"></path></svg>
                 <p>Verify now</p>
               </div>
+              {showModal7 && <Modal7 onClose={() => setShowModal7(false)} />}
             </div>
           </div>
 
@@ -213,10 +233,11 @@ function Profile() {
             <h1 className="para grey-txt">Only visible to HRs</h1>
             <div className="border-grey boxbox-2">
               <div className="para grey-txt">Uploading your resume helps HRs learn more about you</div>
-              <div className="green-adder-box para">
+              <div onClick={() => setShowModal8(true)} className="green-adder-box para">
                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none"><path fill="#1F8268" d="M10.57 6.762H6.762v3.81a.764.764 0 0 1-.762.761.764.764 0 0 1-.762-.762v-3.81h-3.81A.764.764 0 0 1 .667 6c0-.42.343-.762.762-.762h3.81v-3.81c0-.419.342-.761.761-.761.42 0 .762.342.762.762v3.809h3.81c.419 0 .762.343.762.762s-.343.762-.762.762Z"></path></svg>
                 <p>Add Resume</p>
               </div>
+              {showModal8 && <Modal8 onClose={() => setShowModal8(false)} />}
             </div>
           </div>
 
@@ -227,14 +248,16 @@ function Profile() {
             <div className="border-grey boxbox-2">
               <div className="upload">
                 <h1 className="heading heading-inside">Preferred job title/role</h1>
-                <svg className="right-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#1F8268"><path d="M8.355 6.316a.985.985 0 0 0 0 1.515l4.714 4.17-4.714 4.17a.985.985 0 0 0 0 1.515c.474.419 1.24.419 1.713 0l5.577-4.933a.985.985 0 0 0 0-1.515l-5.577-4.933c-.461-.408-1.239-.408-1.713.01Z"></path></svg>
+                <svg onClick={() => setShowModal9(true)} className="right-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#1F8268"><path d="M8.355 6.316a.985.985 0 0 0 0 1.515l4.714 4.17-4.714 4.17a.985.985 0 0 0 0 1.515c.474.419 1.24.419 1.713 0l5.577-4.933a.985.985 0 0 0 0-1.515l-5.577-4.933c-.461-.408-1.239-.408-1.713.01Z"></path></svg>
+                {showModal9 && <Modal9 onClose={() => setShowModal9(false)} />}
               </div>
               <div className="para-inside placeholder">Software Development • Website Development • Software Backend Development • Frontend Development</div>
             </div>
             <div className="border-grey boxbox-2">
               <div className="upload">
                 <h1 className="heading heading-inside">Location</h1>
-                <svg className="right-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#1F8268"><path d="M8.355 6.316a.985.985 0 0 0 0 1.515l4.714 4.17-4.714 4.17a.985.985 0 0 0 0 1.515c.474.419 1.24.419 1.713 0l5.577-4.933a.985.985 0 0 0 0-1.515l-5.577-4.933c-.461-.408-1.239-.408-1.713.01Z"></path></svg>
+                <svg onClick={() => setShowModal10(true)} className="right-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#1F8268"><path d="M8.355 6.316a.985.985 0 0 0 0 1.515l4.714 4.17-4.714 4.17a.985.985 0 0 0 0 1.515c.474.419 1.24.419 1.713 0l5.577-4.933a.985.985 0 0 0 0-1.515l-5.577-4.933c-.461-.408-1.239-.408-1.713.01Z"></path></svg>
+                {showModal10 && <Modal10 onClose={() => setShowModal10(false)} />}
               </div>
               <div className="para-inside placeholder">
                 <span className="input">
@@ -253,7 +276,8 @@ function Profile() {
             <div className="border-grey boxbox-2">
               <div className="upload">
                 <h1 className="heading heading-inside">Job preferences</h1>
-                <svg className="right-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#1F8268"><path d="M8.355 6.316a.985.985 0 0 0 0 1.515l4.714 4.17-4.714 4.17a.985.985 0 0 0 0 1.515c.474.419 1.24.419 1.713 0l5.577-4.933a.985.985 0 0 0 0-1.515l-5.577-4.933c-.461-.408-1.239-.408-1.713.01Z"></path></svg>
+                <svg onClick={() => setShowModal11(true)} className="right-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#1F8268"><path d="M8.355 6.316a.985.985 0 0 0 0 1.515l4.714 4.17-4.714 4.17a.985.985 0 0 0 0 1.515c.474.419 1.24.419 1.713 0l5.577-4.933a.985.985 0 0 0 0-1.515l-5.577-4.933c-.461-.408-1.239-.408-1.713.01Z"></path></svg>
+                {showModal11 && <Modal11 onClose={() => setShowModal11(false)} />}
               </div>
               <div className="para-inside placeholder">
                 <span id="pet"className="input">
@@ -276,15 +300,17 @@ function Profile() {
             <div className="border-grey boxbox-2">
               <h1 className="heading heading-inside">Documents & assets</h1>
               <div className="para-inside grey-txt">Uploading your resume helps HRs learn more about you</div>
-              <div className="green-adder-box para">
+              <div onClick={() => setShowModal12(true)} className="green-adder-box para">
                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none"><path fill="#1F8268" d="M10.57 6.762H6.762v3.81a.764.764 0 0 1-.762.761.764.764 0 0 1-.762-.762v-3.81h-3.81A.764.764 0 0 1 .667 6c0-.42.343-.762.762-.762h3.81v-3.81c0-.419.342-.761.761-.761.42 0 .762.342.762.762v3.809h3.81c.419 0 .762.343.762.762s-.343.762-.762.762Z"></path></svg>
                 <p>Add Document & assets</p>
               </div>
+              {showModal12 && <Modal12 onClose={() => setShowModal12(false)} />}
             </div>
             <div className="border-grey boxbox-2">
               <div className="upload">
                 <h1 className="heading heading-inside">Basic details</h1>
-                <svg className="right-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#1F8268"><path d="M8.355 6.316a.985.985 0 0 0 0 1.515l4.714 4.17-4.714 4.17a.985.985 0 0 0 0 1.515c.474.419 1.24.419 1.713 0l5.577-4.933a.985.985 0 0 0 0-1.515l-5.577-4.933c-.461-.408-1.239-.408-1.713.01Z"></path></svg>
+                <svg onClick={() => setShowModal13(true)} className="right-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#1F8268"><path d="M8.355 6.316a.985.985 0 0 0 0 1.515l4.714 4.17-4.714 4.17a.985.985 0 0 0 0 1.515c.474.419 1.24.419 1.713 0l5.577-4.933a.985.985 0 0 0 0-1.515l-5.577-4.933c-.461-.408-1.239-.408-1.713.01Z"></path></svg>
+                {showModal13 && <Modal13 onClose={() => setShowModal13(false)} />}
               </div>
               <div className="para-inside placeholder">
                 <span className="input name">
@@ -313,10 +339,6 @@ function Profile() {
         </section>
 
       </section>
-
-      <Modal isOpen={!!currentModal} onClose={handleCloseModal}>
-        {currentModal}
-      </Modal>
 
       </main>
     </>

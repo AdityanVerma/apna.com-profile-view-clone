@@ -64,3 +64,15 @@ code {
   justify-content: center;
   align-items: center;
 }
+
+.width-100 {
+  width: 100%;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.pb0 {
+ padding-bottom: 0px !important;
+}
